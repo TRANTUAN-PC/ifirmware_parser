@@ -247,11 +247,11 @@ func_download_ramdisk (){
 	if [ "$platform" = 'Darwin' ]; then
 		# pzb output switch is currently broken in MacOS, this is a quick solution !
 		echo '[!] Moving downloaded files into:' "$download_output"
-		mv -f "*.plist" "$download_output"
-		mv -f "*.im4p" "$download_output"
-		mv -f "kernelcache*" "$download_output"
-		mv -f "*.trustcache" "$download_output"
-		mv -f "*.dmg" "$download_output"
+		mv -f *.plist "$download_output"
+		mv -f *.im4p "$download_output"
+		mv -f kernelcache* "$download_output"
+		mv -f *.trustcache "$download_output"
+		mv -f *.dmg "$download_output"
 	fi
 		
 		echo '[!] Checking downloaded files...'
