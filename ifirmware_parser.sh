@@ -244,7 +244,7 @@ func_download_ramdisk (){
 		"$pzb" -g "$ramdisk_file" "$ipsw_url_json" -o "$download_output"'/'"$ramdisk_file"
 	fi
 	
-	if [ "$platform" != 'Darwin' ]; then
+	if [ "$platform" = 'Darwin' ]; then
 		# pzb output switch is currently broken in MacOS, this is a quick solution !
 		echo '[!] Moving downloaded files into:' "$download_output"
 		mv -f "*.plist" "$download_output"
